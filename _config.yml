@@ -1,8 +1,8 @@
 # Site settings
-title: Zachary J. Leonardo
-email: zachleonardo15@gmail.com
-url: https://zacharyleonardo.com
-description: "Aspiring Software Engineer"
+title: Andrew C. Everitt
+email: everitta@allegheny.edu
+url: https://andreweveritt.com
+description: "Computer Science Student"
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
@@ -10,18 +10,18 @@ color:
   links: '#219ab3'
 
 # Footer settings
-footer: Zachary J. Leonardo
+footer: Andrew C. Everitt
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: https://twitter.com/ZachLeonardoAC?lang=en
+  #- title: twitter
+  #  url: https://twitter.com/ZachLeonardoAC?lang=en
   - title: linkedin
-    url: https://www.linkedin.com/in/zacharyleonardo/
+    url: https://www.linkedin.com/in/andrew-everitt/
   - title: bitbucket
-    url: https://bitbucket.org/leonardoz15/
+    url: https://bitbucket.org/everitt_andrew/
   - title: github
-    url: https://github.com/leonardoz15
+    url: https://github.com/everitt-andrew
 
 # Build settings
 markdown: kramdown
