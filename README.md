@@ -1,12 +1,12 @@
-# Welcome to my Site
+# README for Andrew C. Everitt's Professional Site
 
-## Visit the [URL](https://www.zacharyleonardo.com/) to see the live version!
+## Visit the [URL](https://www.andreweveritt.com/) to see the most up-to date version of my site
 
 ## To build locally, clone using your desired method and run the following commands within the repository:
 ```
 bundle exec jekyll serve
 ```
-Then open your browser and navigate to localhost:4000
+Then open your browser of choice and navigate to localhost:4000
 
 Credits:
 ------------
