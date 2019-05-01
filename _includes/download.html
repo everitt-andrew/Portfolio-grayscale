@@ -4,14 +4,31 @@
              <!-- Interest content -->
              <div class = "container">
                 <div class="col-sm-12-int">
-                  <h3>Blog Post for 15 March 2019:</h3>
-                  <p>In Software Innovations, we completed additional development of GatorGrader. Developed at Allegheny College, the tool is used
-                  to assess computer science students' work. In order to enhance the program, we have worked in a software engineering environment where
-                  small teams tackle issues. My group, which consisted of Simon, Zach, Austin, Christian, and myself worked on LaTeX integration. This issue
-                  was important because seniors use LaTeX during the development of their final project and it lacked any GatorGrader support. We started by
-                  creating a sample repository and quickly realized that implementing the ability for GatorGrader to examine multiple line fragments would be
-                  crucial to the final product. Afterwards, we created a command line argument, necessary documentation to understand how to test for regular
-                  expressions (regex), and the appropriate tests to maintain code coverage. </p>
+                  <h3>Blog Post for 2 May 2019:</h3>
+                  <p>For the second project in Software Innovations, we worked to develop a new software application. My group consisted of Saejin, Josh, Carson, Matt Jones, Karol, and myself.
+                  Our group was tasked with creating a web-based application that allowed teachers to upload a CSV containing test/quiz information and have it automatically formatted to be
+                  distributed to students. This solution was important because most teachers use paper exams, Sakai, or Google Docs, which don't provide as much functionality as some may desire.
+                  We had a Flask web framework to start with, but needed to implement code that allowed users to upload the CSV and turn it into something usable by those here at Allegheny. My
+                  job was to develop the method that handled information from the database. In the end, a portion of my code failed to provide the intended functionality for a couple of reasons.
+                  These relate to the challenges that I faced. First, I found that it was difficult learning the ins and outs of the Flask framework while also trying to develop a somewhat complex
+                  project. The other hardship that I faced was related to this, as my inexperience made it difficult to effectively communicate within the group at some points. As a result, some
+                  functionality in my code was also found within others' work. Besides the formation of the tests, I also worked on the display for open ended questions. Below is a segment of code
+                  which handles the display of multiple choice questions. Although I understood how to display the text box to students, we needed to find a way to differentiate between questions
+                  that were open ended and multiple choice. In the end, we accomplished this by...
+                  <code>
+                    <form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'>
+          						<fieldset>
+          							{% for question in questions %}
+          								<span style="text-decoration: underline;">{{ question.text }}</span>
+          								{% set answer_num = 0 %}
+          								{% for answer in question.answers %}
+          									<div class="answer-div"><input
+          													required type="radio"
+          													name="{{question.id}}" class="answer"
+          													value="{{answer_num}}"/><span>{{answer}}</span>
+          									</div>
+                  </code>
+                   </p>
                     </div>
              </div>
              <!-- Resume Button -->
