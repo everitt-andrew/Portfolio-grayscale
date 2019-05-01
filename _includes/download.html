@@ -15,8 +15,7 @@
                   functionality in my code was also found within others' work. Besides the formation of the tests, I also worked on the display for open ended questions. Below is a segment of code
                   which handles the display of multiple choice questions. Although I understood how to display the text box to students, we needed to find a way to differentiate between questions
                   that were open ended and multiple choice. In the end, we accomplished this by...
-                  <code>
-                    <form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'>
+                  <code><form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'>
           						<fieldset>
           							{% for question in questions %}
           								<span style="text-decoration: underline;">{{ question.text }}</span>
@@ -26,8 +25,7 @@
           													required type="radio"
           													name="{{question.id}}" class="answer"
           													value="{{answer_num}}"/><span>{{answer}}</span>
-          									</div>
-                  </code>
+          									</div></code>
                    </p>
                     </div>
              </div>
