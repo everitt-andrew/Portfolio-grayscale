@@ -12,31 +12,13 @@
                   job was to develop the method that handled information from the database. In the end, a portion of my code failed to provide the intended functionality for a couple of reasons.
                   These relate to the challenges that I faced. First, I found that it was difficult learning the ins and outs of the Flask framework while also trying to develop a somewhat complex
                   project. The other hardship that I faced was related to this, as my inexperience made it difficult to effectively communicate within the group at some points. As a result, some
-                  functionality in my code was also found within others' work. Besides the formation of the tests, I also worked on the display for open ended questions. Lines 28-45 found <a href = "https://github.com/GatorEducator/quizagator/blob/master/application/templates/students/quiz_page.html"here</a>
-                  make up a segment of code which handles the display of multiple choice questions. Although I understood how to display the text box to students, we needed to find a way to
-                  differentiate between questions that were open ended and multiple choice. In the end, we accomplished this by...
-                    <code>
-                      {% raw %}
-                      &lt;form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'&gt;
-            						&lt;fieldset&gt;
-            							{% for question in questions %}
-            								&lt;span style="text-decoration: underline;"&gt;{{ question.text }}&lt;/span&gt;
-            								{% set answer_num = 0 %}
-            								{% for answer in question.answers %}
-            									&lt;div class="answer-div"&gt;&lt;input
-            													required type="radio"
-            													name="{{question.id}}" class="answer"
-            													value="{{answer_num}}"/&gt;<span&gt;{{answer}}&lt;/span&gt;
-            									&lt;/div&gt;
-            									{% set answer_num = answer_num + 1 %}
-            								{% endfor %}&lt;br/&gt;
-            							{% endfor %}
-            							&lt;input type="submit" class="btn btn-primary" /&gt;
-            						&lt;/fieldset&gt;
-            					&lt;/form&gt;
-            				&lt;/div&gt;
-                    {% endraw %}
-                    </code>
+                  functionality in my code was also found within others' work. Besides the formation of the tests, I also worked on the display for open ended questions.  The following code was used
+                  to display multiple choice questions: <code> &lt;div class="answer-div"&gt;&lt;input
+                          required type="radio" </code>
+                  In order to display open ended questions, the required type was changed to text. We could have also used blob, but that type restricts the length
+                  of the string. Although I understood how to display the text box to students, we needed to find a way to differentiate between questions that were open ended and multiple choice.
+                  In the end, we accomplished this by using if statements similarly to how I differentiated questions in my portion of the project. If you are interested in the source code, it can
+                  be found in the repository located <a href = "https://github.com/GatorEducator/quizagator" here. </a>
                    </p>
                     </div>
              </div>
