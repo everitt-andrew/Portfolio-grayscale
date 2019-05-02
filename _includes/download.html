@@ -15,6 +15,24 @@
                   functionality in my code was also found within others' work. Besides the formation of the tests, I also worked on the display for open ended questions. Lines 28-45 found <a href = "https://github.com/GatorEducator/quizagator/blob/master/application/templates/students/quiz_page.html"here</a>
                   make up a segment of code which handles the display of multiple choice questions. Although I understood how to display the text box to students, we needed to find a way to
                   differentiate between questions that were open ended and multiple choice. In the end, we accomplished this by...
+                  ```<form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'>
+						<fieldset>
+							{% for question in questions %}
+								<span style="text-decoration: underline;">{{ question.text }}</span>
+								{% set answer_num = 0 %}
+								{% for answer in question.answers %}
+									<div class="answer-div"><input
+													required type="radio"
+													name="{{question.id}}" class="answer"
+													value="{{answer_num}}"/><span>{{answer}}</span>
+									</div>
+									{% set answer_num = answer_num + 1 %}
+								{% endfor %}<br/>
+							{% endfor %}
+							<input type="submit" class="btn btn-primary" />
+						</fieldset>
+					</form>
+				</div>```
                    </p>
                     </div>
              </div>
