@@ -17,24 +17,25 @@
                   differentiate between questions that were open ended and multiple choice. In the end, we accomplished this by...
                   <pre>
                     <code>
-                      <form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'>
-            						<fieldset>
+                      &lt;form method='POST' action='/students/quizzes/grade/{{quiz_id}}/'&gt;
+            						&lt;fieldset&gt;
             							{% for question in questions %}
-            								<span style="text-decoration: underline;">{{ question.text }}</span>
+            								&lt;span style="text-decoration: underline;"&gt;{{ question.text }}&lt;/span&gt;
             								{% set answer_num = 0 %}
             								{% for answer in question.answers %}
-            									<div class="answer-div"><input
+            									&lt;div class="answer-div"&gt;&lt;input
             													required type="radio"
             													name="{{question.id}}" class="answer"
-            													value="{{answer_num}}"/><span>{{answer}}</span>
-            									</div>
+            													value="{{answer_num}}"/&gt;<span&gt;{{answer}}&lt;/span&gt;
+            									&lt;/div&gt;
             									{% set answer_num = answer_num + 1 %}
-            								{% endfor %}<br/>
+            								{% endfor %}&lt;br/&gt;
             							{% endfor %}
-            							<input type="submit" class="btn btn-primary" />
-            						</fieldset>
-            					</form>
-            				</div> </code></pre>
+            							&lt;input type="submit" class="btn btn-primary" /&gt;
+            						&lt;/fieldset&gt;
+            					&lt;/form&gt;
+            				&lt;/div&gt;
+                    </code></pre>
                    </p>
                     </div>
              </div>
